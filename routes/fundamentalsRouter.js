@@ -21,5 +21,10 @@ router.get('/Check-if-a-number-is-a-whole-number', function(req, res, next) {
   let a = req.query.a;
   res.send({result: a - Math.floor(a) === 0});
 });
+router.get('/Multiplication-division-and-comparison-operators', function(req, res, next) {
+  let a = req.query.a;
+  let b = req.query.b;
+  res.send({result: a<b?a/b:a*b});
+});
 
 module.exports = router;
